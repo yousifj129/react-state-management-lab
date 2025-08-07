@@ -122,6 +122,9 @@ const App = () => {
     setMoney(money + zombieFighter.price)
 
     const newZombieFighters = [...zombieFighters, zombieFighter]
+    newZombieFighters.sort((a,b)=>{
+      return a.id - b.id
+    })
     setZombieFighters(newZombieFighters)
 
     const newTeam = [...team]
